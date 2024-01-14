@@ -29,7 +29,6 @@ public class Main {
             System.exit(1);
         }
 
-
         System.out.println("path: " + commandLine.getPath());
         System.out.println("prefix: " + commandLine.getPrefix());
         System.out.println("append: " + commandLine.getAppend());
