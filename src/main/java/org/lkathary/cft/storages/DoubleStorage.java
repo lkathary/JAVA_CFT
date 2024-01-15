@@ -17,7 +17,7 @@ public class DoubleStorage extends BaseStorage<Double> {
         if (commandLine.getFullStat()) {
             System.out.println("->\nFull statistic for floats: " + storage.size() + " records");
             if (!storage.isEmpty()) {
-                double sum = 0.0f;
+                double sum = 0.0;
                 double min = storage.get(0);
                 double max = min;
                 for (Double it : storage) {

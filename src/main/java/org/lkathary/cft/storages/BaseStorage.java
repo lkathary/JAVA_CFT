@@ -28,16 +28,3 @@ public abstract class BaseStorage<T> implements Iterable<T> {
 
     public abstract void showStatistic(CommandLine commandLine);
 }
-
-//@Getter
-//public abstract class BaseStorage<T> extends ArrayList<T> {
-//
-//    protected TypeFile typeStorage;
-//
-//    @Override
-//    public Iterator<T> iterator() {
-//        return super.iterator();
-//    }
-//
-//    public abstract void showStatistic(CommandLine commandLine);
-//}

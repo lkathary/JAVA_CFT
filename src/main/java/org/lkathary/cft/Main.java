@@ -5,19 +5,10 @@ import com.beust.jcommander.ParameterException;
 import org.lkathary.cft.models.CommandLine;
 import org.lkathary.cft.models.Solution;
 
-import java.util.Arrays;
-
 public class Main {
     public static void main(String[] args) {
 
-        System.out.println(Arrays.toString(args));
-
         CommandLine commandLine = new CommandLine();
-
-//        JCommander.newBuilder()
-//                .addObject(commandLine)
-//                .build()
-//                .parse(args);
 
         JCommander jc = new JCommander();
         jc.addObject(commandLine);

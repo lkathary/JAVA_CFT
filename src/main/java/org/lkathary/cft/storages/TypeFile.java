@@ -14,4 +14,5 @@ public enum TypeFile {
     public String getTitle() {
         return title;
     }
+
 }

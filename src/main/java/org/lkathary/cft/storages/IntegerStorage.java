@@ -26,7 +26,7 @@ public class IntegerStorage extends BaseStorage<Integer> {
                     max = Math.max(max, it);
                 }
                 System.out.println("Sum: " + sum + " Min: " + min + " Max: " + max
-                        + " Average: " + (double)sum / storage.size());
+                        + " Average: " + (double) sum / storage.size());
             }
         }
     }

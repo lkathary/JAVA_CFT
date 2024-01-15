@@ -8,7 +8,6 @@ public class DoubleFilter implements BaseFilter {
         try {
             return Optional.of(Double.parseDouble(line));
         } catch (Exception ignored) {
-//            System.out.println("Error occurred:- " + ignored);
             return Optional.empty();
         }
     }

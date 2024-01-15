@@ -2,7 +2,7 @@ package org.lkathary.cft.filters;
 
 import java.util.Optional;
 
-public class LongFilter implements BaseFilter{
+public class LongFilter implements BaseFilter {
     @Override
     public Optional<Long> parse(String line) {
         try {
