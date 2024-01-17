@@ -24,26 +24,26 @@ public class Solution {
     public void filter() {
 
         BaseFilter bigIntegerFilter = new BigIntegerFilter();
-        BaseFilter floatFilter = new FloatFilter();
+        BaseFilter doubleFilter = new DoubleFilter();
         BaseFilter stringFilter = new StringFilter();
 
         BaseStorage<BigInteger> bigIntegerStorage = new BigIntegerStorage();
-        BaseStorage<Float> floatStorage = new FloatStorage();
+        BaseStorage<Double> doubleStorage = new DoubleStorage();
         BaseStorage<String> stringStorage = new StringStorage();
 
         for (String line : lines) {
             Optional<?> res;
             if ((res = bigIntegerFilter.parse(line)).isPresent()) {
                 bigIntegerStorage.add((BigInteger) res.get());
-            } else if ((res = floatFilter.parse(line)).isPresent()) {
-                floatStorage.add((Float) res.get());
+            } else if ((res = doubleFilter.parse(line)).isPresent()) {
+                doubleStorage.add((Double) res.get());
             } else if ((res = stringFilter.parse(line)).isPresent()) {
                 stringStorage.add((String) res.get());
             }
         }
 
         superStorage.add(bigIntegerStorage);
-        superStorage.add(floatStorage);
+        superStorage.add(doubleStorage);
         superStorage.add(stringStorage);
 
         show();
