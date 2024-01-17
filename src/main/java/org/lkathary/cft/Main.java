@@ -9,23 +9,18 @@ public class Main {
     public static void main(String[] args) {
 
         CommandLine commandLine = new CommandLine();
-
-        JCommander jc = new JCommander();
-        jc.addObject(commandLine);
+        JCommander jc = JCommander.newBuilder().addObject(commandLine).build();
         try {
             jc.parse(args);
+            if(args.length == 0) {
+                jc.usage();
+                return;
+            }
         } catch (ParameterException ex) {
             System.err.println(ex.getMessage());
             jc.usage();
             System.exit(1);
         }
-
-        System.out.println("path: " + commandLine.getPath());
-        System.out.println("prefix: " + commandLine.getPrefix());
-        System.out.println("append: " + commandLine.getAppend());
-        System.out.println("short stat: " + commandLine.getShortStat());
-        System.out.println("full stat: " + commandLine.getFullStat());
-        System.out.println("files: " + commandLine.getFiles());
 
         Solution solution = new Solution(commandLine);
         solution.read();

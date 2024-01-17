@@ -46,7 +46,7 @@ public class Solution {
         superStorage.add(doubleStorage);
         superStorage.add(stringStorage);
 
-        show();
+//        show();
     }
 
     public void show() {
